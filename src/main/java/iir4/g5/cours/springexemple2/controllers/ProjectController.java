@@ -23,7 +23,7 @@ public class ProjectController {
     @GetMapping("/projects/{idProject}")
     @ResponseBody
     public Project getProject(@PathVariable  int idProject) {
-        var project = projectService.get(idProject);
+        Project project = projectService.get(idProject);
 
         if (project == null) {
             throw new NotFoundException("No project found");
